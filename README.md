@@ -1,16 +1,4 @@
-# github_profile_viewer
+Quick Project, listing users info and repos wia Github API. Used Dio package.
 
-A new Flutter application.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![viewer1](https://user-images.githubusercontent.com/70591345/159779375-53e8ab9f-96cf-43f2-a12d-8383b114e86a.PNG)
+![viewer2](https://user-images.githubusercontent.com/70591345/159779383-ac77bfab-c384-417d-8223-d54ac2b4143a.PNG)
