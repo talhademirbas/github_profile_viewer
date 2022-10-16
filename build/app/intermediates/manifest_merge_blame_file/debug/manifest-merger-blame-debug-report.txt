@@ -1,0 +1,129 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.github_profile_viewer"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+9        android:targetSdkVersion="31" />
+10    <!--
+11         Flutter needs it to communicate with the running application
+12         to allow setting breakpoints, to provide hot reload, etc.
+13    -->
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->C:\ornekler\github_profile_viewer\android\app\src\main\AndroidManifest.xml:4:5-66
+14-->C:\ornekler\github_profile_viewer\android\app\src\main\AndroidManifest.xml:4:22-64
+15
+16    <queries>
+16-->C:\ornekler\github_profile_viewer\android\app\src\main\AndroidManifest.xml:5:5-26:15
+17
+18        <!-- If your app opens https URLs -->
+19        <intent>
+19-->C:\ornekler\github_profile_viewer\android\app\src\main\AndroidManifest.xml:7:9-10:18
+20            <action android:name="android.intent.action.VIEW" />
+20-->C:\ornekler\github_profile_viewer\android\app\src\main\AndroidManifest.xml:8:13-65
+20-->C:\ornekler\github_profile_viewer\android\app\src\main\AndroidManifest.xml:8:21-62
+21
+22            <data android:scheme="https" />
+22-->C:\ornekler\github_profile_viewer\android\app\src\main\AndroidManifest.xml:9:13-44
+22-->C:\ornekler\github_profile_viewer\android\app\src\main\AndroidManifest.xml:9:19-41
+23        </intent>
+24        <!-- If your app makes calls -->
+25        <intent>
+25-->C:\ornekler\github_profile_viewer\android\app\src\main\AndroidManifest.xml:12:9-15:18
+26            <action android:name="android.intent.action.DIAL" />
+26-->C:\ornekler\github_profile_viewer\android\app\src\main\AndroidManifest.xml:13:13-65
+26-->C:\ornekler\github_profile_viewer\android\app\src\main\AndroidManifest.xml:13:21-62
+27
+28            <data android:scheme="tel" />
+28-->C:\ornekler\github_profile_viewer\android\app\src\main\AndroidManifest.xml:9:13-44
+28-->C:\ornekler\github_profile_viewer\android\app\src\main\AndroidManifest.xml:9:19-41
+29        </intent>
+30        <!-- If your sends SMS messages -->
+31        <intent>
+31-->C:\ornekler\github_profile_viewer\android\app\src\main\AndroidManifest.xml:17:9-20:18
+32            <action android:name="android.intent.action.SENDTO" />
+32-->C:\ornekler\github_profile_viewer\android\app\src\main\AndroidManifest.xml:18:13-67
+32-->C:\ornekler\github_profile_viewer\android\app\src\main\AndroidManifest.xml:18:21-64
+33
+34            <data android:scheme="smsto" />
+34-->C:\ornekler\github_profile_viewer\android\app\src\main\AndroidManifest.xml:9:13-44
+34-->C:\ornekler\github_profile_viewer\android\app\src\main\AndroidManifest.xml:9:19-41
+35        </intent>
+36        <!-- If your app sends emails -->
+37        <intent>
+37-->C:\ornekler\github_profile_viewer\android\app\src\main\AndroidManifest.xml:22:9-25:18
+38            <action android:name="android.intent.action.SEND" />
+38-->C:\ornekler\github_profile_viewer\android\app\src\main\AndroidManifest.xml:23:13-65
+38-->C:\ornekler\github_profile_viewer\android\app\src\main\AndroidManifest.xml:23:21-62
+39
+40            <data android:mimeType="*/*" />
+40-->C:\ornekler\github_profile_viewer\android\app\src\main\AndroidManifest.xml:9:13-44
+41        </intent>
+42    </queries>
+43
+44    <application
+45        android:name="android.app.Application"
+46        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+46-->[androidx.core:core:1.6.0] C:\Users\talha\.gradle\caches\transforms-2\files-2.1\122df2e57d294d1a53db26bbc3b813c1\core-1.6.0\AndroidManifest.xml:24:18-86
+47        android:debuggable="true"
+48        android:icon="@mipmap/ic_launcher"
+49        android:label="github_profile_viewer" >
+50        <activity
+51            android:name="com.example.github_profile_viewer.MainActivity"
+52            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+53            android:exported="true"
+54            android:hardwareAccelerated="true"
+55            android:launchMode="singleTop"
+56            android:theme="@style/LaunchTheme"
+57            android:windowSoftInputMode="adjustResize" >
+58
+59            <!--
+60                 Specifies an Android theme to apply to this Activity as soon as
+61                 the Android process has started. This theme is visible to the user
+62                 while the Flutter UI initializes. After that, this theme continues
+63                 to determine the Window background behind the Flutter UI.
+64            -->
+65            <meta-data
+66                android:name="io.flutter.embedding.android.NormalTheme"
+67                android:resource="@style/NormalTheme" />
+68
+69            <intent-filter>
+70                <action android:name="android.intent.action.MAIN" />
+71
+72                <category android:name="android.intent.category.LAUNCHER" />
+73            </intent-filter>
+74        </activity>
+75        <!--
+76             Don't delete the meta-data below.
+77             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+78        -->
+79        <meta-data
+80            android:name="flutterEmbedding"
+81            android:value="2" />
+82
+83        <activity
+83-->[:url_launcher_android] C:\ornekler\github_profile_viewer\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-11:74
+84            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+84-->[:url_launcher_android] C:\ornekler\github_profile_viewer\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-74
+85            android:exported="false"
+85-->[:url_launcher_android] C:\ornekler\github_profile_viewer\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-37
+86            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+86-->[:url_launcher_android] C:\ornekler\github_profile_viewer\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-71
+87
+88        <uses-library
+88-->[androidx.window:window:1.0.0-beta04] C:\Users\talha\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+89            android:name="androidx.window.extensions"
+89-->[androidx.window:window:1.0.0-beta04] C:\Users\talha\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+90            android:required="false" />
+90-->[androidx.window:window:1.0.0-beta04] C:\Users\talha\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+91        <uses-library
+91-->[androidx.window:window:1.0.0-beta04] C:\Users\talha\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+92            android:name="androidx.window.sidecar"
+92-->[androidx.window:window:1.0.0-beta04] C:\Users\talha\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+93            android:required="false" />
+93-->[androidx.window:window:1.0.0-beta04] C:\Users\talha\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+94    </application>
+95
+96</manifest>

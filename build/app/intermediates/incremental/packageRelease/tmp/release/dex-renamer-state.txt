@@ -1,0 +1,4 @@
+#Sun Oct 16 18:12:10 TRT 2022
+base.0=C\:\\ornekler\\github_profile_viewer\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
