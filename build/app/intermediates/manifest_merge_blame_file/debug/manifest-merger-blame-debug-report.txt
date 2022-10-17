@@ -66,7 +66,7 @@
 44    <application
 45        android:name="android.app.Application"
 46        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-46-->[androidx.core:core:1.6.0] C:\Users\talha\.gradle\caches\transforms-2\files-2.1\122df2e57d294d1a53db26bbc3b813c1\core-1.6.0\AndroidManifest.xml:24:18-86
+46-->[androidx.core:core:1.6.0] C:\Users\talha\.gradle\caches\transforms-2\files-2.1\bf57ee6ef03cef43525091c12acf6534\core-1.6.0\AndroidManifest.xml:24:18-86
 47        android:debuggable="true"
 48        android:icon="@mipmap/ic_launcher"
 49        android:label="github_profile_viewer" >
@@ -113,17 +113,17 @@
 86-->[:url_launcher_android] C:\ornekler\github_profile_viewer\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-71
 87
 88        <uses-library
-88-->[androidx.window:window:1.0.0-beta04] C:\Users\talha\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+88-->[androidx.window:window:1.0.0-beta04] C:\Users\talha\.gradle\caches\transforms-2\files-2.1\4ae8db8808990911ffb0cc1d905648d2\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
 89            android:name="androidx.window.extensions"
-89-->[androidx.window:window:1.0.0-beta04] C:\Users\talha\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+89-->[androidx.window:window:1.0.0-beta04] C:\Users\talha\.gradle\caches\transforms-2\files-2.1\4ae8db8808990911ffb0cc1d905648d2\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
 90            android:required="false" />
-90-->[androidx.window:window:1.0.0-beta04] C:\Users\talha\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+90-->[androidx.window:window:1.0.0-beta04] C:\Users\talha\.gradle\caches\transforms-2\files-2.1\4ae8db8808990911ffb0cc1d905648d2\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
 91        <uses-library
-91-->[androidx.window:window:1.0.0-beta04] C:\Users\talha\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+91-->[androidx.window:window:1.0.0-beta04] C:\Users\talha\.gradle\caches\transforms-2\files-2.1\4ae8db8808990911ffb0cc1d905648d2\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
 92            android:name="androidx.window.sidecar"
-92-->[androidx.window:window:1.0.0-beta04] C:\Users\talha\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+92-->[androidx.window:window:1.0.0-beta04] C:\Users\talha\.gradle\caches\transforms-2\files-2.1\4ae8db8808990911ffb0cc1d905648d2\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
 93            android:required="false" />
-93-->[androidx.window:window:1.0.0-beta04] C:\Users\talha\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+93-->[androidx.window:window:1.0.0-beta04] C:\Users\talha\.gradle\caches\transforms-2\files-2.1\4ae8db8808990911ffb0cc1d905648d2\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
 94    </application>
 95
 96</manifest>
