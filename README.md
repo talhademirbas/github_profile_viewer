@@ -1,16 +1,6 @@
 # github_profile_viewer
 
-A new Flutter application.
+A simple Flutter application to view a GitHub user's profile and repositories.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![github3main](https://user-images.githubusercontent.com/70591345/196138898-2294750f-080f-4da5-ac63-fa318abe296d.PNG)
+![g3view](https://user-images.githubusercontent.com/70591345/196138911-edfdfa23-c65d-45eb-8d75-e24ca819967e.PNG)
