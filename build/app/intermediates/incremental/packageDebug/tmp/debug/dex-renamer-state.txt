@@ -1,4 +1,4 @@
-#Mon Oct 17 11:43:19 TRT 2022
+#Tue Oct 18 21:02:23 TRT 2022
 base.0=C\:\\ornekler\\github_profile_viewer\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

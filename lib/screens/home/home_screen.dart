@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:github_profile_viewer/components/snack_bar_widget.dart';
@@ -21,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final String _hintText = "Username";
   final String _emptyInputText = "Username can't be empty";
   final String _repoTitle = "Repositories";
-  final String _noRepoMessage = "This user doesn't have a repository :/";
+  final String _noRepoMessage = "This user doesn't have a public repository";
   final TextEditingController _textEditingController = TextEditingController();
   final FocusNode _myFocusNode = FocusNode();
   final ServiceBase _getService = GetService();
@@ -30,6 +32,13 @@ class _HomeScreenState extends State<HomeScreen> {
   List<ReposModel>? _reposList;
   UserModel? _userModel;
   bool _isLoading = false;
+  late final Map<String, dynamic> colorData;
+
+  @override
+  void initState() {
+    super.initState();
+    fetchLanguageJson();
+  }
 
   @override
   void dispose() {
@@ -76,8 +85,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             SliverList(
               delegate: SliverChildBuilderDelegate(
-                  (context, index) =>
-                      RepoCardWidget(reposModel: _reposList?[index]),
+                  (context, index) => RepoCardWidget(
+                      reposModel: _reposList?[index], colorData: colorData),
                   childCount: _reposList?.length ?? 0),
             ),
           ],
@@ -171,5 +180,12 @@ class _HomeScreenState extends State<HomeScreen> {
             minHeight: _mySizes.kDefaultPadding / 2,
           ))
         : SizedBox(height: _mySizes.kDefaultPadding / 2);
+  }
+
+  Future<void> fetchLanguageJson() async {
+    final String response = await DefaultAssetBundle.of(context)
+        .loadString("assets/local_json/language_colors.json");
+
+    colorData = await json.decode(response);
   }
 }

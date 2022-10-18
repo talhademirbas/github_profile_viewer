@@ -8,10 +8,12 @@ class RepoCardWidget extends StatefulWidget {
   const RepoCardWidget({
     Key? key,
     required ReposModel? reposModel,
+    required this.colorData,
   })  : _reposmodel = reposModel,
         super(key: key);
 
   final ReposModel? _reposmodel;
+  final Map<String, dynamic> colorData;
 
   @override
   State<RepoCardWidget> createState() => _RepoCardWidgetState();
@@ -49,7 +51,8 @@ class _RepoCardWidgetState extends State<RepoCardWidget> {
                         ),
                         text: widget._reposmodel?.stargazersCount.toString(),
                         icon2: Icon(Icons.circle,
-                            color: Theme.of(context).colorScheme.primary,
+                            color:
+                                _getLanguageColor(widget._reposmodel?.language),
                             size: _mySizes.kDefaultPadding),
                         text2: widget._reposmodel?.language),
                   ],
@@ -70,6 +73,28 @@ class _RepoCardWidgetState extends State<RepoCardWidget> {
       } else {
         throw 'Could not launch $url';
       }
+    }
+  }
+
+  Color _getColorFromHex(String hexColor) {
+    hexColor = hexColor.replaceAll("#", "");
+    if (hexColor.length == 6) {
+      hexColor = "FF" + hexColor;
+    }
+    if (hexColor.length == 8) {
+      return Color(int.parse("0x$hexColor"));
+    } else {
+      return Colors.transparent;
+    }
+  }
+
+  Color _getLanguageColor(String? language) {
+    String? hexColor = widget.colorData[language];
+
+    if (hexColor != null) {
+      return _getColorFromHex(hexColor);
+    } else {
+      return Colors.transparent;
     }
   }
 }
