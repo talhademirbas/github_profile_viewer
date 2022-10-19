@@ -28,7 +28,6 @@ class _HomeScreenState extends State<HomeScreen> {
   final FocusNode _myFocusNode = FocusNode();
   final ServiceBase _getService = GetService();
   final _formKey = GlobalKey<FormState>();
-  final MySizes _mySizes = MySizes();
   List<ReposModel>? _reposList;
   UserModel? _userModel;
   bool _isLoading = false;
@@ -57,9 +56,9 @@ class _HomeScreenState extends State<HomeScreen> {
             SliverToBoxAdapter(child: _indicatorOrEmpty()),
             SliverPadding(
               padding: EdgeInsets.only(
-                  top: _mySizes.kDefaultPadding * 2,
-                  left: _mySizes.kDefaultPadding,
-                  right: _mySizes.kDefaultPadding),
+                  top: MySizes.kDefaultPadding * 2,
+                  left: MySizes.kDefaultPadding,
+                  right: MySizes.kDefaultPadding),
               sliver: SliverToBoxAdapter(
                 child: Form(
                   key: _formKey,
@@ -68,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             SliverPadding(
-              padding: EdgeInsets.all(_mySizes.kDefaultPadding),
+              padding: EdgeInsets.all(MySizes.kDefaultPadding),
               sliver: SliverToBoxAdapter(
                 child: UserCardWidget(
                   userModel: _userModel,
@@ -77,8 +76,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             SliverPadding(
               padding: EdgeInsets.symmetric(
-                  vertical: _mySizes.kDefaultPadding,
-                  horizontal: _mySizes.kDefaultPadding * 2),
+                  vertical: MySizes.kDefaultPadding,
+                  horizontal: MySizes.kDefaultPadding * 2),
               sliver: SliverToBoxAdapter(
                 child: _getRepoTitle(context),
               ),
@@ -129,13 +128,13 @@ class _HomeScreenState extends State<HomeScreen> {
             filled: true,
             fillColor: Theme.of(context).colorScheme.surface,
             border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(_mySizes.kDefaultPadding)),
+                borderRadius: BorderRadius.circular(MySizes.kDefaultPadding)),
             prefixIcon: const Icon(Icons.account_circle),
             labelText: _hintText,
             suffixIcon: IconButton(
               onPressed: _isLoading ? null : _formOnPressed,
               icon: Icon(FontAwesomeIcons.magnifyingGlass,
-                  size: _mySizes.kDefaultPadding * 2),
+                  size: MySizes.kDefaultPadding * 2),
             )));
   }
 
@@ -177,9 +176,9 @@ class _HomeScreenState extends State<HomeScreen> {
     return _isLoading
         ? Center(
             child: LinearProgressIndicator(
-            minHeight: _mySizes.kDefaultPadding / 2,
+            minHeight: MySizes.kDefaultPadding / 2,
           ))
-        : SizedBox(height: _mySizes.kDefaultPadding / 2);
+        : SizedBox(height: MySizes.kDefaultPadding / 2);
   }
 
   Future<void> fetchLanguageJson() async {

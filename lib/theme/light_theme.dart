@@ -1,26 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:github_profile_viewer/utils/constants.dart';
+
+import '../utils/constants.dart';
 
 class MyThemes {
-  final _myColors = MyColors();
-  final MySizes _mySizes = MySizes();
   late ThemeData lightTheme;
 
   MyThemes() {
     lightTheme = ThemeData.light().copyWith(
       visualDensity: VisualDensity.adaptivePlatformDensity,
-        scaffoldBackgroundColor: _myColors.white2,
+        scaffoldBackgroundColor: MyColors.white2,
         colorScheme: ColorScheme.light(
-            primary: _myColors.grey2,
-            secondary: _myColors.grey1,
-            surface: _myColors.white2),
+            primary: MyColors.grey2,
+            secondary: MyColors.grey1,
+            surface: MyColors.white2),
         cardTheme: CardTheme(
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(_mySizes.kDefaultPadding)),
-            color: _myColors.white1,
-            elevation: _mySizes.kDefaultPadding / 2),
+                borderRadius: BorderRadius.circular(MySizes.kDefaultPadding)),
+            color: MyColors.white1,
+            elevation: MySizes.kDefaultPadding / 2),
         progressIndicatorTheme:
-            ProgressIndicatorThemeData(color: _myColors.yellowAccent),
+            ProgressIndicatorThemeData(color: MyColors.yellowAccent),
         appBarTheme: const AppBarTheme(elevation: 0));
   }
 }
