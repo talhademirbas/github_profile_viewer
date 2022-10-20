@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final TextEditingController _textEditingController = TextEditingController();
   final FocusNode _myFocusNode = FocusNode();
   final ServiceBase _getService = GetService();
-  final _formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _formKey = GlobalKey();
   final MySizes _mySizes = MySizes();
   List<ReposModel>? _reposList;
   UserModel? _userModel;
