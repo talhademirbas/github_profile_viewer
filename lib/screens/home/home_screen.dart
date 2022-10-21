@@ -28,6 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final FocusNode _myFocusNode = FocusNode();
   final ServiceBase _getService = GetService();
   final _formKey = GlobalKey<FormState>();
+
   List<ReposModel>? _reposList;
   UserModel? _userModel;
   bool _isLoading = false;
