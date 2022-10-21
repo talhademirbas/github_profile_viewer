@@ -20,40 +20,37 @@ class RepoCardWidget extends StatefulWidget {
 }
 
 class _RepoCardWidgetState extends State<RepoCardWidget> {
-  final MyColors _myColors = MyColors();
-  final MySizes _mySizes = MySizes();
-
   @override
   Widget build(BuildContext context) {
     return Card(
         margin: EdgeInsets.only(
-            bottom: _mySizes.kDefaultPadding,
-            left: _mySizes.kDefaultPadding,
-            right: _mySizes.kDefaultPadding),
+            bottom: MySizes.kDefaultPadding,
+            left: MySizes.kDefaultPadding,
+            right: MySizes.kDefaultPadding),
         child: ListTile(
           contentPadding: EdgeInsets.symmetric(
-              horizontal: _mySizes.kSmallPadding * 2,
-              vertical: _mySizes.kSmallPadding),
+              horizontal: MySizes.kSmallPadding * 2,
+              vertical: MySizes.kSmallPadding),
           title: NullCheck(text: widget._reposmodel?.name),
           subtitle: Column(
             children: [
               NullCheck(text: widget._reposmodel?.description),
               Padding(
-                padding: EdgeInsets.only(top: _mySizes.kDefaultPadding),
+                padding: EdgeInsets.only(top: MySizes.kDefaultPadding),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     NullCheck(
                         icon: Icon(
                           Icons.star,
-                          color: _myColors.yellowAccent,
-                          size: _mySizes.kDefaultIcon,
+                          color: MyColors.yellowAccent,
+                          size: MySizes.kDefaultIcon,
                         ),
                         text: widget._reposmodel?.stargazersCount.toString(),
                         icon2: Icon(Icons.circle,
                             color:
                                 _getLanguageColor(widget._reposmodel?.language),
-                            size: _mySizes.kDefaultPadding),
+                            size: MySizes.kDefaultPadding),
                         text2: widget._reposmodel?.language),
                   ],
                 ),
