@@ -130,7 +130,7 @@ class _HomeScreenState extends State<HomeScreen> {
               color: MyColors.grey1,
               onPressed: _isLoading ? null : _formOnPressed,
               icon: Icon(FontAwesomeIcons.magnifyingGlass,
-                  size: MySizes.kDefaultPadding * 2),
+                  size: MySizes.kDefaultIcon),
             )));
   }
 

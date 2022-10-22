@@ -21,6 +21,6 @@ class MySizes {
   static double kDefaultIcon = 18;
   static double kSmallIcon = 14;
 
-  static double kCircle= 26;
-  static double kBoldCircle= 28;
+  static double kCircle = 26;
+  static double kBoldCircle = 28;
 }

@@ -64,7 +64,9 @@ class _UserCardWidgetState extends State<UserCardWidget> {
               child: NullCheck(
                   text: widget._userModel?.bio,
                   textStyle: Theme.of(context).textTheme.bodyText2?.copyWith(
-                      fontWeight: FontWeight.w400, color: MyColors.grey2,fontSize: 14)),
+                      fontWeight: FontWeight.w400,
+                      color: MyColors.grey2,
+                      fontSize: 14)),
             ),
             Padding(
               padding: EdgeInsets.only(bottom: MySizes.kDefaultPadding / 2),

@@ -25,6 +25,9 @@ class MyThemes {
             color: MyColors.white1,
             elevation: MySizes.kDefaultPadding / 2),
         inputDecorationTheme: InputDecorationTheme(
+          contentPadding: EdgeInsets.symmetric(
+              horizontal: MySizes.kDefaultPadding,
+              vertical: MySizes.kDefaultIcon),
           errorStyle: ThemeData.light()
               .textTheme
               .subtitle2
@@ -33,7 +36,8 @@ class MyThemes {
           filled: true,
           fillColor: MyColors.white1,
           border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(MySizes.kDefaultPadding)),
+            borderRadius: BorderRadius.circular(MySizes.kDefaultPadding),
+          ),
         ),
         progressIndicatorTheme:
             ProgressIndicatorThemeData(color: MyColors.yellowAccent),
