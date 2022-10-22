@@ -41,32 +41,36 @@ class _UserCardWidgetState extends State<UserCardWidget> {
                 contentPadding: EdgeInsets.zero,
                 leading: widget._userModel?.avatarUrl != null
                     ? CircleAvatar(
-                        backgroundColor:
-                            Theme.of(context).colorScheme.secondary,
-                        radius: MySizes.kDefaultPadding * 3,
-                        backgroundImage:
-                            NetworkImage(widget._userModel!.avatarUrl!))
+                        radius: MySizes.kBoldCircle,
+                        backgroundColor: MyColors.white3,
+                        child: CircleAvatar(
+                            radius: MySizes.kCircle,
+                            backgroundColor: MyColors.white3,
+                            backgroundImage:
+                                NetworkImage(widget._userModel!.avatarUrl!)),
+                      )
                     : const SizedBox.shrink(),
                 title: NullCheck(
                     text: widget._userModel?.name,
                     textStyle: Theme.of(context).textTheme.headline6),
                 subtitle: NullCheck(
                     text: widget._userModel?.login,
-                    textStyle: Theme.of(context).textTheme.subtitle1),
+                    textStyle: Theme.of(context).textTheme.subtitle1?.copyWith(
+                        color: MyColors.grey1, fontWeight: FontWeight.w300)),
               ),
             ),
             Padding(
               padding: EdgeInsets.only(bottom: MySizes.kDefaultPadding),
               child: NullCheck(
                   text: widget._userModel?.bio,
-                  textStyle: Theme.of(context).textTheme.bodyText2),
+                  textStyle: Theme.of(context).textTheme.bodyText2?.copyWith(
+                      fontWeight: FontWeight.w400, color: MyColors.grey2,fontSize: 14)),
             ),
             Padding(
               padding: EdgeInsets.only(bottom: MySizes.kDefaultPadding / 2),
               child: NullCheck(
                   icon: Icon(FontAwesomeIcons.briefcase,
-                      size: MySizes.kSmallIcon,
-                      color: Theme.of(context).colorScheme.primary),
+                      size: MySizes.kSmallIcon, color: MyColors.grey1),
                   text: widget._userModel?.company,
                   textStyle: Theme.of(context).textTheme.bodyText2),
             ),
@@ -74,8 +78,7 @@ class _UserCardWidgetState extends State<UserCardWidget> {
               padding: EdgeInsets.only(bottom: MySizes.kDefaultPadding / 2),
               child: NullCheck(
                   icon: Icon(FontAwesomeIcons.locationDot,
-                      size: MySizes.kSmallIcon,
-                      color: Theme.of(context).colorScheme.primary),
+                      size: MySizes.kSmallIcon, color: MyColors.grey1),
                   text: widget._userModel?.location,
                   textStyle: Theme.of(context).textTheme.bodyText2),
             ),
@@ -83,8 +86,7 @@ class _UserCardWidgetState extends State<UserCardWidget> {
               padding: EdgeInsets.only(bottom: MySizes.kDefaultPadding / 2),
               child: NullCheck(
                   icon: Icon(FontAwesomeIcons.link,
-                      size: MySizes.kSmallIcon,
-                      color: Theme.of(context).colorScheme.primary),
+                      size: MySizes.kSmallIcon, color: MyColors.grey1),
                   text: widget._userModel?.blog,
                   textStyle: Theme.of(context).textTheme.bodyText2),
             ),
@@ -92,25 +94,24 @@ class _UserCardWidgetState extends State<UserCardWidget> {
               padding: EdgeInsets.only(bottom: MySizes.kDefaultPadding / 2),
               child: NullCheck(
                   icon: Icon(FontAwesomeIcons.twitter,
-                      size: MySizes.kSmallIcon,
-                      color: Theme.of(context).colorScheme.primary),
+                      size: MySizes.kSmallIcon, color: MyColors.grey1),
                   text: widget._userModel?.twitterUsername,
                   textStyle: Theme.of(context).textTheme.bodyText2),
             ),
             Padding(
               padding: EdgeInsets.only(bottom: MySizes.kDefaultPadding / 2),
               child: NullCheck(
-                  text: "${widget._userModel?.followers}",
-                  parameter1: _followersText,
-                  text2: "${widget._userModel?.following}",
-                  parameter2: _followingText,
-                  icon: Icon(FontAwesomeIcons.solidUser,
-                      size: MySizes.kSmallIcon,
-                      color: Theme.of(context).colorScheme.primary),
-                  icon2: Icon(FontAwesomeIcons.circle,
-                      size: MySizes.kSmallIcon / 2,
-                      color: Theme.of(context).colorScheme.primary),
-                  textStyle: Theme.of(context).textTheme.bodyText2),
+                text: "${widget._userModel?.followers}",
+                parameter1: _followersText,
+                text2: "${widget._userModel?.following}",
+                parameter2: _followingText,
+                icon: Icon(FontAwesomeIcons.solidUser,
+                    size: MySizes.kSmallIcon, color: MyColors.grey1),
+                icon2: Icon(Icons.circle,
+                    size: MySizes.kSmallIcon / 5, color: MyColors.grey1),
+                textStyle: Theme.of(context).textTheme.bodyText2?.copyWith(
+                    color: MyColors.grey2, fontWeight: FontWeight.w400),
+              ),
             ),
           ],
         ),

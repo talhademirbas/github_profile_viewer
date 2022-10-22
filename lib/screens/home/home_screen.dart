@@ -68,7 +68,10 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             SliverPadding(
-              padding: EdgeInsets.all(MySizes.kDefaultPadding),
+              padding: EdgeInsets.only(
+                  top: MySizes.kDefaultPadding,
+                  left: MySizes.kDefaultPadding,
+                  right: MySizes.kDefaultPadding),
               sliver: SliverToBoxAdapter(
                 child: UserCardWidget(
                   userModel: _userModel,
@@ -77,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             SliverPadding(
               padding: EdgeInsets.symmetric(
-                  vertical: MySizes.kDefaultPadding,
+                  vertical: MySizes.kDefaultPadding * 2,
                   horizontal: MySizes.kDefaultPadding * 2),
               sliver: SliverToBoxAdapter(
                 child: _getRepoTitle(context),
@@ -121,18 +124,10 @@ class _HomeScreenState extends State<HomeScreen> {
         textInputAction: TextInputAction.done,
         maxLength: 39,
         decoration: InputDecoration(
-            errorStyle: Theme.of(context)
-                .textTheme
-                .subtitle2
-                ?.copyWith(color: Theme.of(context).errorColor),
-            counterStyle: Theme.of(context).textTheme.bodyText2,
-            filled: true,
-            fillColor: Theme.of(context).colorScheme.surface,
-            border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(MySizes.kDefaultPadding)),
-            prefixIcon: const Icon(Icons.account_circle),
+            prefixIcon: Icon(Icons.account_circle, color: MyColors.grey1),
             labelText: _hintText,
             suffixIcon: IconButton(
+              color: MyColors.grey1,
               onPressed: _isLoading ? null : _formOnPressed,
               icon: Icon(FontAwesomeIcons.magnifyingGlass,
                   size: MySizes.kDefaultPadding * 2),

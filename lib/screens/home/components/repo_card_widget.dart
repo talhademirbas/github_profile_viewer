@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:github_profile_viewer/components/null_check_widget.dart';
 import 'package:github_profile_viewer/utils/constants.dart';
 import 'package:github_profile_viewer/service/model/repos_model.dart';
@@ -32,31 +33,59 @@ class _RepoCardWidgetState extends State<RepoCardWidget> {
           contentPadding: EdgeInsets.symmetric(
               horizontal: MySizes.kSmallPadding * 2,
               vertical: MySizes.kSmallPadding),
-          title: NullCheck(text: widget._reposmodel?.name),
-          subtitle: Column(
-            children: [
-              NullCheck(text: widget._reposmodel?.description),
-              Padding(
-                padding: EdgeInsets.only(top: MySizes.kDefaultPadding),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    NullCheck(
-                        icon: Icon(
-                          Icons.star,
-                          color: MyColors.yellowAccent,
-                          size: MySizes.kDefaultIcon,
-                        ),
-                        text: widget._reposmodel?.stargazersCount.toString(),
-                        icon2: Icon(Icons.circle,
-                            color:
-                                _getLanguageColor(widget._reposmodel?.language),
-                            size: MySizes.kDefaultPadding),
-                        text2: widget._reposmodel?.language),
-                  ],
-                ),
-              )
-            ],
+          title: NullCheck(
+              text: widget._reposmodel?.name,
+              textStyle: Theme.of(context)
+                  .textTheme
+                  .subtitle2
+                  ?.copyWith(color: MyColors.blue)),
+          subtitle: Padding(
+            padding: EdgeInsets.only(top: MySizes.kSmallPadding),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                NullCheck(
+                    text: widget._reposmodel?.description,
+                    textStyle: Theme.of(context).textTheme.subtitle2?.copyWith(
+                        fontWeight: FontWeight.w400,
+                        fontSize: MySizes.kDefaultFont,
+                        color: MyColors.grey1)),
+                Padding(
+                  padding: EdgeInsets.only(top: MySizes.kDefaultPadding),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      NullCheck(
+                          icon: Icon(Icons.circle,
+                              color: _getLanguageColor(
+                                  widget._reposmodel?.language),
+                              size: MySizes.kSmallIcon),
+                          text: widget._reposmodel?.language,
+                          icon2: Icon(
+                            FontAwesomeIcons.star,
+                            size: MySizes.kSmallFont,
+                            color: MyColors.grey1,
+                          ),
+                          text2: widget._reposmodel?.stargazersCount.toString(),
+                          textStyle: Theme.of(context)
+                              .textTheme
+                              .subtitle2
+                              ?.copyWith(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: MySizes.kDefaultFont,
+                                  color: MyColors.grey1),
+                          textStyle2: Theme.of(context)
+                              .textTheme
+                              .subtitle2
+                              ?.copyWith(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: MySizes.kDefaultFont,
+                                  color: MyColors.grey1)),
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
           trailing: const Icon(Icons.chevron_right_outlined),
           onTap: _launchUrl,
