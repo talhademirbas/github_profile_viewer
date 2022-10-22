@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:github_profile_viewer/components/decorated_input_border.dart';
 import '../utils/constants.dart';
 
 class MyThemes {
@@ -25,20 +26,30 @@ class MyThemes {
             color: MyColors.white1,
             elevation: MySizes.kDefaultPadding / 2),
         inputDecorationTheme: InputDecorationTheme(
-          contentPadding: EdgeInsets.symmetric(
-              horizontal: MySizes.kDefaultPadding,
-              vertical: MySizes.kDefaultIcon),
-          errorStyle: ThemeData.light()
-              .textTheme
-              .subtitle2
-              ?.copyWith(color: ThemeData.light().errorColor),
-          counterStyle: ThemeData.light().textTheme.caption,
-          filled: true,
-          fillColor: MyColors.white1,
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(MySizes.kDefaultPadding),
-          ),
-        ),
+            errorStyle: ThemeData.light()
+                .textTheme
+                .subtitle2
+                ?.copyWith(color: ThemeData.light().errorColor),
+            counterStyle: ThemeData.light().textTheme.caption,
+            filled: true,
+            fillColor: MyColors.white1,
+            border: DecoratedInputBorder(
+              child: OutlineInputBorder(
+                borderSide: BorderSide.none,
+                borderRadius:
+                    BorderRadius.all(Radius.circular(MySizes.kDefaultPadding)),
+              ),
+              shadow: BoxShadow(
+                blurStyle: BlurStyle.normal,
+                offset: const Offset(
+                  0.0,
+                  4.0,
+                ),
+                spreadRadius: 0,
+                blurRadius: 4,
+                color: Colors.grey.shade400,
+              ),
+            )),
         progressIndicatorTheme:
             ProgressIndicatorThemeData(color: MyColors.yellowAccent),
         appBarTheme: const AppBarTheme(elevation: 0));

@@ -58,6 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
             SliverPadding(
               padding: EdgeInsets.only(
                   top: MySizes.kDefaultPadding * 2,
+                  bottom: MySizes.kDefaultPadding,
                   left: MySizes.kDefaultPadding,
                   right: MySizes.kDefaultPadding),
               sliver: SliverToBoxAdapter(
@@ -109,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
-  TextFormField _myTextFormField(BuildContext context) {
+  Widget _myTextFormField(BuildContext context) {
     return TextFormField(
         validator: (value) {
           if (value == null || value.isEmpty) {
@@ -124,8 +125,11 @@ class _HomeScreenState extends State<HomeScreen> {
         textInputAction: TextInputAction.done,
         maxLength: 39,
         decoration: InputDecoration(
+            contentPadding: EdgeInsets.symmetric(
+                horizontal: MySizes.kDefaultPadding,
+                vertical: MySizes.kDefaultPadding * 2),
+            hintText: _hintText,
             prefixIcon: Icon(Icons.account_circle, color: MyColors.grey1),
-            labelText: _hintText,
             suffixIcon: IconButton(
               color: MyColors.grey1,
               onPressed: _isLoading ? null : _formOnPressed,
