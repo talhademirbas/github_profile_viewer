@@ -23,6 +23,7 @@ class _RepoCardWidgetState extends State<RepoCardWidget> {
   @override
   Widget build(BuildContext context) {
     return Card(
+        clipBehavior: Clip.hardEdge,
         margin: EdgeInsets.only(
             bottom: MySizes.kDefaultPadding,
             left: MySizes.kDefaultPadding,

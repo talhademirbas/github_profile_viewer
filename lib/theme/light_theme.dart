@@ -7,7 +7,7 @@ class MyThemes {
 
   MyThemes() {
     lightTheme = ThemeData.light().copyWith(
-      visualDensity: VisualDensity.adaptivePlatformDensity,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
         scaffoldBackgroundColor: MyColors.white2,
         colorScheme: ColorScheme.light(
             primary: MyColors.grey2,
