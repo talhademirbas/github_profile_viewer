@@ -53,7 +53,6 @@ class MyThemes {
               ),
             )),
         progressIndicatorTheme:
-            ProgressIndicatorThemeData(color: MyColors.yellowAccent),
-        appBarTheme: const AppBarTheme(elevation: 0));
+            ProgressIndicatorThemeData(color: MyColors.yellowAccent));
   }
 }

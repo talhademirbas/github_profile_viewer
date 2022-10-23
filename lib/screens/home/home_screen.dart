@@ -19,7 +19,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final String _titleText = "Github Profile Viewer";
+  final String _titleText = "GitHub Profile Viewer";
   final String _hintText = "Username";
   final String _emptyInputText = "Username can't be empty";
   final String _repoTitle = "Repositories";
@@ -53,7 +53,14 @@ class _HomeScreenState extends State<HomeScreen> {
         resizeToAvoidBottomInset: false,
         body: CustomScrollView(
           slivers: <Widget>[
-            SliverAppBar(title: Text(_titleText)),
+            SliverAppBar(
+                title: Text(_titleText),
+                forceElevated: true,
+                elevation: MySizes.kDefaultPadding / 2,
+                titleTextStyle: Theme.of(context)
+                    .textTheme
+                    .headline6
+                    ?.copyWith(color: MyColors.white3)),
             SliverToBoxAdapter(child: _indicatorOrEmpty()),
             SliverPadding(
               padding: EdgeInsets.only(
