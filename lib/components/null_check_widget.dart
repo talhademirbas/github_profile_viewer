@@ -38,7 +38,7 @@ class NullCheck extends StatelessWidget {
             children: [
               icon!,
               Padding(
-                padding: const EdgeInsets.only(left: 6.0),
+                padding: EdgeInsets.only(left: MySizes.kDefaultFont / 2),
                 child: Row(
                   children: [
                     Text(
@@ -55,12 +55,12 @@ class NullCheck extends StatelessWidget {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.only(left:4.0),
+            padding: EdgeInsets.only(left: MySizes.kSmallPadding / 2),
             child: Row(
               children: [
                 icon2!,
                 Padding(
-                  padding: const EdgeInsets.only(left:4.0),
+                  padding: EdgeInsets.only(left: MySizes.kSmallPadding / 2),
                   child: Row(
                     children: [
                       Text(
@@ -121,7 +121,7 @@ class NullCheck extends StatelessWidget {
         return Row(children: [
           icon!,
           Padding(
-            padding: const EdgeInsets.only(left: 6.0),
+            padding: EdgeInsets.only(left: MySizes.kDefaultFont / 2),
             child: Text(
               "$text",
               style: textStyle ?? const TextStyle(),

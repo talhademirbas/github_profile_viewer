@@ -18,8 +18,10 @@ class MyThemes {
                 .textTheme
                 .headline6
                 ?.copyWith(color: MyColors.grey2),
-            bodyText2: ThemeData.light().textTheme.bodyText2?.copyWith(
-                fontWeight: FontWeight.w300, fontSize: MySizes.kDefaultFont)),
+            bodyText2: ThemeData.light()
+                .textTheme
+                .bodyText2
+                ?.copyWith(fontWeight: FontWeight.w300)),
         cardTheme: CardTheme(
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(MySizes.kDefaultPadding)),
