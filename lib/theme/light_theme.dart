@@ -43,13 +43,13 @@ class MyThemes {
               ),
               shadow: BoxShadow(
                 blurStyle: BlurStyle.normal,
-                offset: const Offset(
-                  0.0,
-                  4.0,
+                offset: Offset(
+                  0,
+                  MySizes.kSmallPadding / 2,
                 ),
                 spreadRadius: 0,
-                blurRadius: 4,
-                color: Colors.grey.shade400,
+                blurRadius: MySizes.kSmallPadding / 2,
+                color: MyColors.shadowColor,
               ),
             )),
         progressIndicatorTheme:
