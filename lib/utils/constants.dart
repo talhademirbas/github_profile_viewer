@@ -7,6 +7,7 @@ class MyColors {
 
   static Color grey1 = const Color(0xff57606a);
   static Color grey2 = const Color(0xff24292f);
+  static Color shadowColor = Colors.grey.shade400;
   static Color yellowAccent = const Color(0xfffbc100);
   static Color blue = const Color(0xff0969da);
 }

@@ -69,6 +69,7 @@ abstract class HomeScreenViewModel extends State<HomeScreen> {
               hintText: hintText,
               prefixIcon: Icon(Icons.account_circle, color: MyColors.grey1),
               suffixIcon: IconButton(
+                splashRadius: 0.1,
                 color: MyColors.grey1,
                 onPressed: isLoading ? null : formOnPressed,
                 icon: Icon(FontAwesomeIcons.magnifyingGlass,
@@ -95,7 +96,6 @@ abstract class HomeScreenViewModel extends State<HomeScreen> {
           behavior: SnackBarBehavior.floating,
           backgroundColor: Colors.transparent,
           content: SnackBarWidget(message: "$e")));
-      //debugPrint(e.toString());
     }
     changeLoading(false);
   }

@@ -43,11 +43,35 @@ class _UserCardWidgetState extends State<UserCardWidget> {
                     ? CircleAvatar(
                         radius: MySizes.kBoldCircle,
                         backgroundColor: MyColors.white3,
-                        child: CircleAvatar(
-                            radius: MySizes.kCircle,
-                            backgroundColor: MyColors.white3,
-                            backgroundImage:
-                                NetworkImage(widget._userModel!.avatarUrl!)),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(50),
+                          child: CircleAvatar(
+                              child: Image.network(
+                                widget._userModel!.avatarUrl!,
+                                fit: BoxFit.cover,
+                                loadingBuilder:
+                                    (context, child, loadingProgress) {
+                                  if (loadingProgress == null) return child;
+                                  return Center(
+                                    child: Transform.scale(
+                                      scale: 0.8,
+                                      child: CircularProgressIndicator(
+                                        value: (loadingProgress
+                                                    .expectedTotalBytes !=
+                                                null
+                                            ? loadingProgress
+                                                    .cumulativeBytesLoaded /
+                                                loadingProgress
+                                                    .expectedTotalBytes!
+                                            : null),
+                                      ),
+                                    ),
+                                  );
+                                },
+                              ),
+                              radius: MySizes.kCircle,
+                              backgroundColor: MyColors.white3),
+                        ),
                       )
                     : const SizedBox.shrink(),
                 title: NullCheck(
