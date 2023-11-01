@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Github Profile Viewer',
+        title: 'Github Profile Viewer2',
         theme: MyThemes().lightTheme,
         home: const HomeScreen());
   }
