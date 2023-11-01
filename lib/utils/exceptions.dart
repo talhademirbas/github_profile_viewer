@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 
 class CustomException implements Exception {
-  final DioError _error;
+  final DioException _error;
   final String _forbidden = "Sorry, we cant access to service";
   final String _notFound = "Sorry, we couldnt find this user";
   final String _noInternetException =

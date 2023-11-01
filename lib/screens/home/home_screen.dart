@@ -22,7 +22,7 @@ class _HomeScreenState extends HomeScreenViewModel {
                 title: Text(titleText),
                 titleTextStyle: Theme.of(context)
                     .textTheme
-                    .headline6
+                    .titleLarge
                     ?.copyWith(color: MyColors.white3)),
             SliverToBoxAdapter(child: indicatorOrEmpty()),
             SliverPadding(

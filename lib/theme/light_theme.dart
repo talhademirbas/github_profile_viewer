@@ -14,13 +14,13 @@ class MyThemes {
           secondary: MyColors.grey2,
         ),
         textTheme: ThemeData.light().textTheme.copyWith(
-            headline6: ThemeData.light()
+            titleLarge: ThemeData.light()
                 .textTheme
-                .headline6
+                .titleLarge
                 ?.copyWith(color: MyColors.grey2),
-            bodyText2: ThemeData.light()
+            bodyMedium: ThemeData.light()
                 .textTheme
-                .bodyText2
+                .bodyMedium
                 ?.copyWith(fontWeight: FontWeight.w300)),
         cardTheme: CardTheme(
             shape: RoundedRectangleBorder(
@@ -30,9 +30,9 @@ class MyThemes {
         inputDecorationTheme: InputDecorationTheme(
             errorStyle: ThemeData.light()
                 .textTheme
-                .subtitle2
-                ?.copyWith(color: ThemeData.light().errorColor),
-            counterStyle: ThemeData.light().textTheme.caption,
+                .titleSmall
+                ?.copyWith(color: ThemeData.light().colorScheme.error),
+            counterStyle: ThemeData.light().textTheme.bodySmall,
             filled: true,
             fillColor: MyColors.white1,
             border: DecoratedInputBorder(

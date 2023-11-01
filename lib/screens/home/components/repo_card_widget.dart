@@ -37,7 +37,7 @@ class _RepoCardWidgetState extends State<RepoCardWidget> {
               text: widget._reposmodel?.name,
               textStyle: Theme.of(context)
                   .textTheme
-                  .subtitle2
+                  .titleSmall
                   ?.copyWith(color: MyColors.blue)),
           subtitle: Padding(
             padding: EdgeInsets.only(top: MySizes.kSmallPadding),
@@ -46,7 +46,7 @@ class _RepoCardWidgetState extends State<RepoCardWidget> {
               children: [
                 NullCheck(
                     text: widget._reposmodel?.description,
-                    textStyle: Theme.of(context).textTheme.subtitle2?.copyWith(
+                    textStyle: Theme.of(context).textTheme.titleSmall?.copyWith(
                         fontWeight: FontWeight.w400,
                         fontSize: MySizes.kDefaultFont,
                         color: MyColors.grey1)),
@@ -69,14 +69,14 @@ class _RepoCardWidgetState extends State<RepoCardWidget> {
                           text2: widget._reposmodel?.stargazersCount.toString(),
                           textStyle: Theme.of(context)
                               .textTheme
-                              .subtitle2
+                              .titleSmall
                               ?.copyWith(
                                   fontWeight: FontWeight.w400,
                                   fontSize: MySizes.kDefaultFont,
                                   color: MyColors.grey1),
                           textStyle2: Theme.of(context)
                               .textTheme
-                              .subtitle2
+                              .titleSmall
                               ?.copyWith(
                                   fontWeight: FontWeight.w400,
                                   fontSize: MySizes.kDefaultFont,
@@ -93,20 +93,19 @@ class _RepoCardWidgetState extends State<RepoCardWidget> {
   }
 
   void _launchUrl() async {
-    final String? url = widget._reposmodel?.htmlUrl;
-    if (url != null) {
-      if (await canLaunch(url)) {
-        await launch(url);
-      } else {
-        throw 'Could not launch $url';
-      }
+    final Uri url = Uri.parse('${widget._reposmodel?.htmlUrl}');
+
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url);
+    } else {
+      throw 'Could not launch $url';
     }
   }
 
   Color _getColorFromHex(String hexColor) {
     hexColor = hexColor.replaceAll("#", "");
     if (hexColor.length == 6) {
-      hexColor = "FF" + hexColor;
+      hexColor = "FF$hexColor";
     }
     if (hexColor.length == 8) {
       return Color(int.parse("0x$hexColor"));

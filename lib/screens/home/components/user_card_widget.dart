@@ -46,6 +46,8 @@ class _UserCardWidgetState extends State<UserCardWidget> {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(50),
                           child: CircleAvatar(
+                              radius: MySizes.kCircle,
+                              backgroundColor: MyColors.white3,
                               child: Image.network(
                                 widget._userModel!.avatarUrl!,
                                 fit: BoxFit.cover,
@@ -68,18 +70,16 @@ class _UserCardWidgetState extends State<UserCardWidget> {
                                     ),
                                   );
                                 },
-                              ),
-                              radius: MySizes.kCircle,
-                              backgroundColor: MyColors.white3),
+                              )),
                         ),
                       )
                     : const SizedBox.shrink(),
                 title: NullCheck(
                     text: widget._userModel?.name,
-                    textStyle: Theme.of(context).textTheme.headline6),
+                    textStyle: Theme.of(context).textTheme.titleLarge),
                 subtitle: NullCheck(
                     text: widget._userModel?.login,
-                    textStyle: Theme.of(context).textTheme.subtitle1?.copyWith(
+                    textStyle: Theme.of(context).textTheme.titleMedium?.copyWith(
                         color: MyColors.grey1, fontWeight: FontWeight.w300)),
               ),
             ),
@@ -87,7 +87,7 @@ class _UserCardWidgetState extends State<UserCardWidget> {
               padding: EdgeInsets.only(bottom: MySizes.kDefaultPadding),
               child: NullCheck(
                   text: widget._userModel?.bio,
-                  textStyle: Theme.of(context).textTheme.bodyText2?.copyWith(
+                  textStyle: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       fontWeight: FontWeight.w400,
                       color: MyColors.grey2,
                       fontSize: 14)),
@@ -98,7 +98,7 @@ class _UserCardWidgetState extends State<UserCardWidget> {
                   icon: Icon(FontAwesomeIcons.briefcase,
                       size: MySizes.kSmallIcon, color: MyColors.grey1),
                   text: widget._userModel?.company,
-                  textStyle: Theme.of(context).textTheme.bodyText2),
+                  textStyle: Theme.of(context).textTheme.bodyMedium),
             ),
             Padding(
               padding: EdgeInsets.only(bottom: MySizes.kDefaultPadding / 2),
@@ -106,7 +106,7 @@ class _UserCardWidgetState extends State<UserCardWidget> {
                   icon: Icon(FontAwesomeIcons.locationDot,
                       size: MySizes.kSmallIcon, color: MyColors.grey1),
                   text: widget._userModel?.location,
-                  textStyle: Theme.of(context).textTheme.bodyText2),
+                  textStyle: Theme.of(context).textTheme.bodyMedium),
             ),
             Padding(
               padding: EdgeInsets.only(bottom: MySizes.kDefaultPadding / 2),
@@ -114,7 +114,7 @@ class _UserCardWidgetState extends State<UserCardWidget> {
                   icon: Icon(FontAwesomeIcons.link,
                       size: MySizes.kSmallIcon, color: MyColors.grey1),
                   text: widget._userModel?.blog,
-                  textStyle: Theme.of(context).textTheme.bodyText2),
+                  textStyle: Theme.of(context).textTheme.bodyMedium),
             ),
             Padding(
               padding: EdgeInsets.only(bottom: MySizes.kDefaultPadding / 2),
@@ -122,7 +122,7 @@ class _UserCardWidgetState extends State<UserCardWidget> {
                   icon: Icon(FontAwesomeIcons.twitter,
                       size: MySizes.kSmallIcon, color: MyColors.grey1),
                   text: widget._userModel?.twitterUsername,
-                  textStyle: Theme.of(context).textTheme.bodyText2),
+                  textStyle: Theme.of(context).textTheme.bodyMedium),
             ),
             Padding(
               padding: EdgeInsets.only(bottom: MySizes.kDefaultPadding / 2),
@@ -135,7 +135,7 @@ class _UserCardWidgetState extends State<UserCardWidget> {
                     size: MySizes.kSmallIcon, color: MyColors.grey1),
                 icon2: Icon(Icons.circle,
                     size: MySizes.kSmallIcon / 5, color: MyColors.grey1),
-                textStyle: Theme.of(context).textTheme.bodyText2?.copyWith(
+                textStyle: Theme.of(context).textTheme.bodyMedium?.copyWith(
                     color: MyColors.grey2, fontWeight: FontWeight.w400),
               ),
             ),
@@ -161,7 +161,7 @@ class _UserCardWidgetState extends State<UserCardWidget> {
                 _greetingText,
                 style: Theme.of(context)
                     .textTheme
-                    .headline5
+                    .headlineSmall
                     ?.copyWith(fontSize: MySizes.kDefaultPadding * 2),
               ),
             )

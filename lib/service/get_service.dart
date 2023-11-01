@@ -17,11 +17,11 @@ class GetService implements ServiceBase {
       final response = await _dio.get(username);
 
       if (response.statusCode == HttpStatus.ok) {
-        UserModel? _userModel;
-        _userModel = UserModel.fromJson(response.data);
-        return _userModel;
+        UserModel? userModel;
+        userModel = UserModel.fromJson(response.data);
+        return userModel;
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       throw CustomException(e);
     }
     return null;
@@ -33,15 +33,15 @@ class GetService implements ServiceBase {
       final response = await _dio.get("$username/repos");
 
       if (response.statusCode == HttpStatus.ok) {
-        final _data = response.data;
+        final data = response.data;
 
-        if (_data is List) {
-          List<ReposModel>? _repoList;
-          _repoList = _data.map((e) => ReposModel.fromJson(e)).toList();
-          return _repoList;
+        if (data is List) {
+          List<ReposModel>? repoList;
+          repoList = data.map((e) => ReposModel.fromJson(e)).toList();
+          return repoList;
         }
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       throw CustomException(e);
     }
     return null;

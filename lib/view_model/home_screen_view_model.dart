@@ -42,11 +42,11 @@ abstract class HomeScreenViewModel extends State<HomeScreen> {
     if (reposList == null) {
       return const SizedBox.shrink();
     } else if (reposList!.isEmpty) {
-      return Text(noRepoMessage, style: Theme.of(context).textTheme.headline6);
+      return Text(noRepoMessage, style: Theme.of(context).textTheme.titleLarge);
     } else {
       return Text(
         repoTitle,
-        style: Theme.of(context).textTheme.headline6,
+        style: Theme.of(context).textTheme.titleLarge,
       );
     }
   }
@@ -91,13 +91,15 @@ abstract class HomeScreenViewModel extends State<HomeScreen> {
       userModel = await getService.fetchUserItems(username);
       reposList = await getService.fetchRepoItems(username);
     } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          elevation: 0,
-          behavior: SnackBarBehavior.floating,
-          backgroundColor: Colors.transparent,
-          content: SnackBarWidget(message: "$e")));
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            elevation: 0,
+            behavior: SnackBarBehavior.floating,
+            backgroundColor: Colors.transparent,
+            content: SnackBarWidget(message: "$e")));
+      }
+      changeLoading(false);
     }
-    changeLoading(false);
   }
 
   void changeLoading(bool input) {
