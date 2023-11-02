@@ -9,12 +9,12 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  final String _title = 'Github Profile Viewer';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Github Profile Viewer2',
+        title: _title,
         theme: MyThemes().lightTheme,
         home: const HomeScreen());
   }
