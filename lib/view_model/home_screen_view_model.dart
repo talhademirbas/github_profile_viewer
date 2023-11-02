@@ -67,7 +67,8 @@ abstract class HomeScreenViewModel extends State<HomeScreen> {
                   horizontal: MySizes.kDefaultPadding,
                   vertical: MySizes.kDefaultPadding * 2),
               hintText: hintText,
-              prefixIcon: const Icon(Icons.account_circle, color: MyColors.grey1),
+              prefixIcon:
+                  const Icon(Icons.account_circle, color: MyColors.grey1),
               suffixIcon: IconButton(
                 splashRadius: 0.1,
                 color: MyColors.grey1,
@@ -91,13 +92,11 @@ abstract class HomeScreenViewModel extends State<HomeScreen> {
       userModel = await getService.fetchUserItems(username);
       reposList = await getService.fetchRepoItems(username);
     } catch (e) {
-      if (context.mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-            elevation: 0,
-            behavior: SnackBarBehavior.floating,
-            backgroundColor: Colors.transparent,
-            content: SnackBarWidget(message: "$e")));
-      }
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          elevation: 0,
+          behavior: SnackBarBehavior.floating,
+          backgroundColor: Colors.transparent,
+          content: SnackBarWidget(message: "$e")));
       changeLoading(false);
     }
   }
