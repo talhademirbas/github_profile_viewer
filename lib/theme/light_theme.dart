@@ -9,7 +9,7 @@ class MyThemes {
     lightTheme = ThemeData.light().copyWith(
         visualDensity: VisualDensity.adaptivePlatformDensity,
         scaffoldBackgroundColor: MyColors.white2,
-        colorScheme: ColorScheme.light(
+        colorScheme: const ColorScheme.light(
           primary: MyColors.grey2,
           secondary: MyColors.grey2,
         ),
@@ -36,12 +36,12 @@ class MyThemes {
             filled: true,
             fillColor: MyColors.white1,
             border: DecoratedInputBorder(
-              child: OutlineInputBorder(
+              child: const OutlineInputBorder(
                 borderSide: BorderSide.none,
                 borderRadius:
                     BorderRadius.all(Radius.circular(MySizes.kDefaultPadding)),
               ),
-              shadow: BoxShadow(
+              shadow: const BoxShadow(
                 blurStyle: BlurStyle.normal,
                 offset: Offset(
                   0,
@@ -53,6 +53,6 @@ class MyThemes {
               ),
             )),
         progressIndicatorTheme:
-            ProgressIndicatorThemeData(color: MyColors.yellowAccent));
+            const ProgressIndicatorThemeData(color: MyColors.yellowAccent));
   }
 }

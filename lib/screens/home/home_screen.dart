@@ -26,7 +26,7 @@ class _HomeScreenState extends HomeScreenViewModel {
                     ?.copyWith(color: MyColors.white3)),
             SliverToBoxAdapter(child: indicatorOrEmpty()),
             SliverPadding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                   top: MySizes.kDefaultPadding * 2,
                   bottom: MySizes.kDefaultPadding,
                   left: MySizes.kDefaultPadding,
@@ -36,7 +36,7 @@ class _HomeScreenState extends HomeScreenViewModel {
               ),
             ),
             SliverPadding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                   top: MySizes.kDefaultPadding,
                   left: MySizes.kDefaultPadding,
                   right: MySizes.kDefaultPadding),
@@ -47,7 +47,7 @@ class _HomeScreenState extends HomeScreenViewModel {
               ),
             ),
             SliverPadding(
-              padding: EdgeInsets.symmetric(
+              padding: const EdgeInsets.symmetric(
                   vertical: MySizes.kDefaultPadding * 2,
                   horizontal: MySizes.kDefaultPadding * 2),
               sliver: SliverToBoxAdapter(

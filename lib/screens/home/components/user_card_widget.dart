@@ -31,12 +31,12 @@ class _UserCardWidgetState extends State<UserCardWidget> {
     return Card(
       margin: EdgeInsets.zero,
       child: Padding(
-        padding: EdgeInsets.all(MySizes.kSmallPadding * 2),
+        padding: const EdgeInsets.all(MySizes.kSmallPadding * 2),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.only(bottom: MySizes.kDefaultPadding),
+              padding: const EdgeInsets.only(bottom: MySizes.kDefaultPadding),
               child: ListTile(
                 contentPadding: EdgeInsets.zero,
                 leading: widget._userModel?.avatarUrl != null
@@ -79,12 +79,16 @@ class _UserCardWidgetState extends State<UserCardWidget> {
                     textStyle: Theme.of(context).textTheme.titleLarge),
                 subtitle: NullCheck(
                     text: widget._userModel?.login,
-                    textStyle: Theme.of(context).textTheme.titleMedium?.copyWith(
-                        color: MyColors.grey1, fontWeight: FontWeight.w300)),
+                    textStyle: Theme.of(context)
+                        .textTheme
+                        .titleMedium
+                        ?.copyWith(
+                            color: MyColors.grey1,
+                            fontWeight: FontWeight.w300)),
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(bottom: MySizes.kDefaultPadding),
+              padding: const EdgeInsets.only(bottom: MySizes.kDefaultPadding),
               child: NullCheck(
                   text: widget._userModel?.bio,
                   textStyle: Theme.of(context).textTheme.bodyMedium?.copyWith(
@@ -93,47 +97,52 @@ class _UserCardWidgetState extends State<UserCardWidget> {
                       fontSize: 14)),
             ),
             Padding(
-              padding: EdgeInsets.only(bottom: MySizes.kDefaultPadding / 2),
+              padding:
+                  const EdgeInsets.only(bottom: MySizes.kDefaultPadding / 2),
               child: NullCheck(
-                  icon: Icon(FontAwesomeIcons.briefcase,
+                  icon: const Icon(FontAwesomeIcons.briefcase,
                       size: MySizes.kSmallIcon, color: MyColors.grey1),
                   text: widget._userModel?.company,
                   textStyle: Theme.of(context).textTheme.bodyMedium),
             ),
             Padding(
-              padding: EdgeInsets.only(bottom: MySizes.kDefaultPadding / 2),
+              padding:
+                  const EdgeInsets.only(bottom: MySizes.kDefaultPadding / 2),
               child: NullCheck(
-                  icon: Icon(FontAwesomeIcons.locationDot,
+                  icon: const Icon(FontAwesomeIcons.locationDot,
                       size: MySizes.kSmallIcon, color: MyColors.grey1),
                   text: widget._userModel?.location,
                   textStyle: Theme.of(context).textTheme.bodyMedium),
             ),
             Padding(
-              padding: EdgeInsets.only(bottom: MySizes.kDefaultPadding / 2),
+              padding:
+                  const EdgeInsets.only(bottom: MySizes.kDefaultPadding / 2),
               child: NullCheck(
-                  icon: Icon(FontAwesomeIcons.link,
+                  icon: const Icon(FontAwesomeIcons.link,
                       size: MySizes.kSmallIcon, color: MyColors.grey1),
                   text: widget._userModel?.blog,
                   textStyle: Theme.of(context).textTheme.bodyMedium),
             ),
             Padding(
-              padding: EdgeInsets.only(bottom: MySizes.kDefaultPadding / 2),
+              padding:
+                  const EdgeInsets.only(bottom: MySizes.kDefaultPadding / 2),
               child: NullCheck(
-                  icon: Icon(FontAwesomeIcons.twitter,
+                  icon: const Icon(FontAwesomeIcons.twitter,
                       size: MySizes.kSmallIcon, color: MyColors.grey1),
                   text: widget._userModel?.twitterUsername,
                   textStyle: Theme.of(context).textTheme.bodyMedium),
             ),
             Padding(
-              padding: EdgeInsets.only(bottom: MySizes.kDefaultPadding / 2),
+              padding:
+                  const EdgeInsets.only(bottom: MySizes.kDefaultPadding / 2),
               child: NullCheck(
                 text: "${widget._userModel?.followers}",
                 parameter1: _followersText,
                 text2: "${widget._userModel?.following}",
                 parameter2: _followingText,
-                icon: Icon(FontAwesomeIcons.solidUser,
+                icon: const Icon(FontAwesomeIcons.solidUser,
                     size: MySizes.kSmallIcon, color: MyColors.grey1),
-                icon2: Icon(Icons.circle,
+                icon2: const Icon(Icons.circle,
                     size: MySizes.kSmallIcon / 5, color: MyColors.grey1),
                 textStyle: Theme.of(context).textTheme.bodyMedium?.copyWith(
                     color: MyColors.grey2, fontWeight: FontWeight.w400),
@@ -149,14 +158,15 @@ class _UserCardWidgetState extends State<UserCardWidget> {
     return FittedBox(
       fit: BoxFit.fitWidth,
       child: Padding(
-        padding: EdgeInsets.all(MySizes.kDefaultPadding * 4),
+        padding: const EdgeInsets.all(MySizes.kDefaultPadding * 4),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(FontAwesomeIcons.github, size: MySizes.kDefaultPadding * 3),
+            const Icon(FontAwesomeIcons.github,
+                size: MySizes.kDefaultPadding * 3),
             Padding(
-              padding: EdgeInsets.only(top: MySizes.kDefaultPadding / 2),
+              padding: const EdgeInsets.only(top: MySizes.kDefaultPadding / 2),
               child: Text(
                 _greetingText,
                 style: Theme.of(context)

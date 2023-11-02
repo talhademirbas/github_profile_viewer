@@ -38,7 +38,7 @@ class NullCheck extends StatelessWidget {
             children: [
               icon!,
               Padding(
-                padding: EdgeInsets.only(left: MySizes.kDefaultFont / 2),
+                padding: const EdgeInsets.only(left: MySizes.kDefaultFont / 2),
                 child: Row(
                   children: [
                     Text(
@@ -55,12 +55,13 @@ class NullCheck extends StatelessWidget {
             ],
           ),
           Padding(
-            padding: EdgeInsets.only(left: MySizes.kSmallPadding / 2),
+            padding: const EdgeInsets.only(left: MySizes.kSmallPadding / 2),
             child: Row(
               children: [
                 icon2!,
                 Padding(
-                  padding: EdgeInsets.only(left: MySizes.kSmallPadding / 2),
+                  padding:
+                      const EdgeInsets.only(left: MySizes.kSmallPadding / 2),
                   child: Row(
                     children: [
                       Text(
@@ -88,7 +89,7 @@ class NullCheck extends StatelessWidget {
             children: [
               icon!,
               Padding(
-                padding: EdgeInsets.only(left: MySizes.kSmallPadding / 2),
+                padding: const EdgeInsets.only(left: MySizes.kSmallPadding / 2),
                 child: Text(
                   "$text",
                   style: textStyle ?? const TextStyle(),
@@ -97,13 +98,14 @@ class NullCheck extends StatelessWidget {
             ],
           ),
           Padding(
-            padding: EdgeInsets.only(left: MySizes.kSmallPadding),
+            padding: const EdgeInsets.only(left: MySizes.kSmallPadding),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 icon2!,
                 Padding(
-                  padding: EdgeInsets.only(left: MySizes.kSmallPadding / 2),
+                  padding:
+                      const EdgeInsets.only(left: MySizes.kSmallPadding / 2),
                   child: Text(
                     "$text2",
                     style: textStyle ?? const TextStyle(),
@@ -121,7 +123,7 @@ class NullCheck extends StatelessWidget {
         return Row(children: [
           icon!,
           Padding(
-            padding: EdgeInsets.only(left: MySizes.kDefaultFont / 2),
+            padding: const EdgeInsets.only(left: MySizes.kDefaultFont / 2),
             child: Text(
               "$text",
               style: textStyle ?? const TextStyle(),

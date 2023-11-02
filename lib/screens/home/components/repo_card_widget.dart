@@ -25,12 +25,12 @@ class _RepoCardWidgetState extends State<RepoCardWidget> {
   Widget build(BuildContext context) {
     return Card(
         clipBehavior: Clip.hardEdge,
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
             bottom: MySizes.kDefaultPadding,
             left: MySizes.kDefaultPadding,
             right: MySizes.kDefaultPadding),
         child: ListTile(
-          contentPadding: EdgeInsets.symmetric(
+          contentPadding: const EdgeInsets.symmetric(
               horizontal: MySizes.kSmallPadding * 2,
               vertical: MySizes.kSmallPadding),
           title: NullCheck(
@@ -40,7 +40,7 @@ class _RepoCardWidgetState extends State<RepoCardWidget> {
                   .titleSmall
                   ?.copyWith(color: MyColors.blue)),
           subtitle: Padding(
-            padding: EdgeInsets.only(top: MySizes.kSmallPadding),
+            padding: const EdgeInsets.only(top: MySizes.kSmallPadding),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -51,7 +51,7 @@ class _RepoCardWidgetState extends State<RepoCardWidget> {
                         fontSize: MySizes.kDefaultFont,
                         color: MyColors.grey1)),
                 Padding(
-                  padding: EdgeInsets.only(top: MySizes.kDefaultPadding),
+                  padding: const EdgeInsets.only(top: MySizes.kDefaultPadding),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -61,7 +61,7 @@ class _RepoCardWidgetState extends State<RepoCardWidget> {
                                   widget._reposmodel?.language),
                               size: MySizes.kSmallIcon),
                           text: widget._reposmodel?.language,
-                          icon2: Icon(
+                          icon2: const Icon(
                             FontAwesomeIcons.star,
                             size: MySizes.kSmallFont,
                             color: MyColors.grey1,

@@ -63,16 +63,16 @@ abstract class HomeScreenViewModel extends State<HomeScreen> {
           textInputAction: TextInputAction.done,
           maxLength: 39,
           decoration: InputDecoration(
-              contentPadding: EdgeInsets.symmetric(
+              contentPadding: const EdgeInsets.symmetric(
                   horizontal: MySizes.kDefaultPadding,
                   vertical: MySizes.kDefaultPadding * 2),
               hintText: hintText,
-              prefixIcon: Icon(Icons.account_circle, color: MyColors.grey1),
+              prefixIcon: const Icon(Icons.account_circle, color: MyColors.grey1),
               suffixIcon: IconButton(
                 splashRadius: 0.1,
                 color: MyColors.grey1,
                 onPressed: isLoading ? null : formOnPressed,
-                icon: Icon(FontAwesomeIcons.magnifyingGlass,
+                icon: const Icon(FontAwesomeIcons.magnifyingGlass,
                     size: MySizes.kDefaultIcon),
               ))),
     );
@@ -115,11 +115,11 @@ abstract class HomeScreenViewModel extends State<HomeScreen> {
 
   SingleChildRenderObjectWidget indicatorOrEmpty() {
     return isLoading
-        ? Center(
+        ? const Center(
             child: LinearProgressIndicator(
             minHeight: MySizes.kDefaultPadding / 2,
           ))
-        : SizedBox(height: MySizes.kDefaultPadding / 2);
+        : const SizedBox(height: MySizes.kDefaultPadding / 2);
   }
 
   Future<void> fetchLanguageJson() async {
