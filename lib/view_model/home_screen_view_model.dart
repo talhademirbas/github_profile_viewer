@@ -124,8 +124,9 @@ abstract class HomeScreenViewModel extends State<HomeScreen> {
   }
 
   Future<void> fetchLanguageJson() async {
-    final String response = await DefaultAssetBundle.of(context)
-        .loadString("assets/local_json/language_colors.json");
+    const String lanColorpath = 'assets/local_json/language_colors.json';
+    final String response =
+        await DefaultAssetBundle.of(context).loadString(lanColorpath);
 
     colorData = await json.decode(response);
   }

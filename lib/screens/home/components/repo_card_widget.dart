@@ -94,11 +94,12 @@ class _RepoCardWidgetState extends State<RepoCardWidget> {
 
   void _launchUrl() async {
     final Uri url = Uri.parse('${widget._reposmodel?.htmlUrl}');
+    final String errorMessage = 'Could not launch $url';
 
     if (await canLaunchUrl(url)) {
       await launchUrl(url);
     } else {
-      throw 'Could not launch $url';
+      throw errorMessage;
     }
   }
 
