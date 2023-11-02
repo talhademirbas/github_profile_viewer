@@ -91,7 +91,6 @@ abstract class HomeScreenViewModel extends State<HomeScreen> {
     try {
       userModel = await getService.fetchUserItems(username);
       reposList = await getService.fetchRepoItems(username);
-      changeLoading(false);
     } catch (e) {
       if (!context.mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -99,6 +98,7 @@ abstract class HomeScreenViewModel extends State<HomeScreen> {
           behavior: SnackBarBehavior.floating,
           backgroundColor: Colors.transparent,
           content: SnackBarWidget(message: "$e")));
+    } finally {
       changeLoading(false);
     }
   }
