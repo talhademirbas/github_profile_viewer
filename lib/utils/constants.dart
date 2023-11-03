@@ -9,8 +9,8 @@ class MyColors {
   static const Color grey2 = Color(0xff24292f);
   static const Color shadowColor = Color.fromARGB(255, 189, 189, 189);
 
-  static const Color yellowAccent = Color(0xfffbc100);
-  static const Color blue = Color(0xff0969da);
+  static const Color yellowAccent = Color(0xfffbc100); //progress indicator
+  static const Color blue = Color(0xff0969da); //repo isimleri
 }
 
 class MySizes {

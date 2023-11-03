@@ -52,6 +52,19 @@ abstract class HomeScreenViewModel extends State<HomeScreen> {
   }
 
   Widget myFormField(BuildContext context) {
+    InputDecoration formInputDecoration = InputDecoration(
+        contentPadding: const EdgeInsets.symmetric(
+            horizontal: MySizes.kDefaultPadding,
+            vertical: MySizes.kDefaultPadding * 2),
+        hintText: hintText,
+        prefixIcon: const Icon(Icons.account_circle, color: MyColors.grey1),
+        suffixIcon: IconButton(
+          splashRadius: 0.1,
+          color: MyColors.grey1,
+          onPressed: isLoading ? null : formOnPressed,
+          icon: const Icon(FontAwesomeIcons.magnifyingGlass,
+              size: MySizes.kDefaultIcon),
+        ));
     return Form(
       key: formKey,
       child: TextFormField(
@@ -62,20 +75,7 @@ abstract class HomeScreenViewModel extends State<HomeScreen> {
           controller: textEditingController,
           textInputAction: TextInputAction.done,
           maxLength: 39,
-          decoration: InputDecoration(
-              contentPadding: const EdgeInsets.symmetric(
-                  horizontal: MySizes.kDefaultPadding,
-                  vertical: MySizes.kDefaultPadding * 2),
-              hintText: hintText,
-              prefixIcon:
-                  const Icon(Icons.account_circle, color: MyColors.grey1),
-              suffixIcon: IconButton(
-                splashRadius: 0.1,
-                color: MyColors.grey1,
-                onPressed: isLoading ? null : formOnPressed,
-                icon: const Icon(FontAwesomeIcons.magnifyingGlass,
-                    size: MySizes.kDefaultIcon),
-              ))),
+          decoration: formInputDecoration),
     );
   }
 

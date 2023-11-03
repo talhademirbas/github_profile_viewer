@@ -14,10 +14,6 @@ class MyThemes {
           secondary: MyColors.grey2,
         ),
         textTheme: ThemeData.light().textTheme.copyWith(
-            titleLarge: ThemeData.light()
-                .textTheme
-                .titleLarge
-                ?.copyWith(color: MyColors.grey2),
             bodyMedium: ThemeData.light()
                 .textTheme
                 .bodyMedium
